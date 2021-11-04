@@ -28,11 +28,17 @@ namespace ConexaoBanco
             txtCPF.Clear();
             txtDataNasc.Clear();
             txtNome.Clear();
+            TxtCelular.Clear();
         }
 
         private void BtFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

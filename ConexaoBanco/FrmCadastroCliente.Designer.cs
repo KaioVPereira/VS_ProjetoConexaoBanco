@@ -42,12 +42,14 @@ namespace ConexaoBanco
             this.BtExcluir = new System.Windows.Forms.Button();
             this.BtProcurar = new System.Windows.Forms.Button();
             this.BtLimpar = new System.Windows.Forms.Button();
+            this.TxtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.LbCelular = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LbCodigoCliente
             // 
             this.LbCodigoCliente.AutoSize = true;
-            this.LbCodigoCliente.Location = new System.Drawing.Point(26, 9);
+            this.LbCodigoCliente.Location = new System.Drawing.Point(12, 9);
             this.LbCodigoCliente.Name = "LbCodigoCliente";
             this.LbCodigoCliente.Size = new System.Drawing.Size(93, 13);
             this.LbCodigoCliente.TabIndex = 0;
@@ -55,7 +57,7 @@ namespace ConexaoBanco
             // 
             // txtCodigoCliente
             // 
-            this.txtCodigoCliente.Location = new System.Drawing.Point(29, 25);
+            this.txtCodigoCliente.Location = new System.Drawing.Point(15, 25);
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.Size = new System.Drawing.Size(90, 20);
             this.txtCodigoCliente.TabIndex = 1;
@@ -63,7 +65,7 @@ namespace ConexaoBanco
             // LbCPF
             // 
             this.LbCPF.AutoSize = true;
-            this.LbCPF.Location = new System.Drawing.Point(164, 9);
+            this.LbCPF.Location = new System.Drawing.Point(116, 9);
             this.LbCPF.Name = "LbCPF";
             this.LbCPF.Size = new System.Drawing.Size(30, 13);
             this.LbCPF.TabIndex = 2;
@@ -71,7 +73,7 @@ namespace ConexaoBanco
             // 
             // txtCPF
             // 
-            this.txtCPF.Location = new System.Drawing.Point(167, 25);
+            this.txtCPF.Location = new System.Drawing.Point(119, 25);
             this.txtCPF.Mask = "999.999.999-99";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
@@ -81,7 +83,7 @@ namespace ConexaoBanco
             // LbDataNascimento
             // 
             this.LbDataNascimento.AutoSize = true;
-            this.LbDataNascimento.Location = new System.Drawing.Point(333, 9);
+            this.LbDataNascimento.Location = new System.Drawing.Point(241, 9);
             this.LbDataNascimento.Name = "LbDataNascimento";
             this.LbDataNascimento.Size = new System.Drawing.Size(107, 13);
             this.LbDataNascimento.TabIndex = 4;
@@ -89,7 +91,7 @@ namespace ConexaoBanco
             // 
             // txtDataNasc
             // 
-            this.txtDataNasc.Location = new System.Drawing.Point(336, 25);
+            this.txtDataNasc.Location = new System.Drawing.Point(244, 25);
             this.txtDataNasc.Mask = "00/00/0000";
             this.txtDataNasc.Name = "txtDataNasc";
             this.txtDataNasc.Size = new System.Drawing.Size(67, 20);
@@ -99,7 +101,7 @@ namespace ConexaoBanco
             // LbNomeCliente
             // 
             this.LbNomeCliente.AutoSize = true;
-            this.LbNomeCliente.Location = new System.Drawing.Point(26, 63);
+            this.LbNomeCliente.Location = new System.Drawing.Point(12, 63);
             this.LbNomeCliente.Name = "LbNomeCliente";
             this.LbNomeCliente.Size = new System.Drawing.Size(88, 13);
             this.LbNomeCliente.TabIndex = 6;
@@ -107,10 +109,11 @@ namespace ConexaoBanco
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(29, 79);
+            this.txtNome.Location = new System.Drawing.Point(12, 79);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(411, 20);
             this.txtNome.TabIndex = 7;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // BtGravar
             // 
@@ -165,12 +168,31 @@ namespace ConexaoBanco
             this.BtLimpar.UseVisualStyleBackColor = true;
             this.BtLimpar.Click += new System.EventHandler(this.BtLimpar_Click);
             // 
+            // TxtCelular
+            // 
+            this.TxtCelular.Location = new System.Drawing.Point(370, 25);
+            this.TxtCelular.Mask = "99-99999-9999";
+            this.TxtCelular.Name = "TxtCelular";
+            this.TxtCelular.Size = new System.Drawing.Size(100, 20);
+            this.TxtCelular.TabIndex = 13;
+            // 
+            // LbCelular
+            // 
+            this.LbCelular.AutoSize = true;
+            this.LbCelular.Location = new System.Drawing.Point(373, 9);
+            this.LbCelular.Name = "LbCelular";
+            this.LbCelular.Size = new System.Drawing.Size(42, 13);
+            this.LbCelular.TabIndex = 14;
+            this.LbCelular.Text = "Celular:";
+            // 
             // FrmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 178);
             this.ControlBox = false;
+            this.Controls.Add(this.LbCelular);
+            this.Controls.Add(this.TxtCelular);
             this.Controls.Add(this.BtLimpar);
             this.Controls.Add(this.BtProcurar);
             this.Controls.Add(this.BtExcluir);
@@ -209,5 +231,7 @@ namespace ConexaoBanco
         private System.Windows.Forms.Button BtExcluir;
         private System.Windows.Forms.Button BtProcurar;
         private System.Windows.Forms.Button BtLimpar;
+        private System.Windows.Forms.MaskedTextBox TxtCelular;
+        private System.Windows.Forms.Label LbCelular;
     }
 }
