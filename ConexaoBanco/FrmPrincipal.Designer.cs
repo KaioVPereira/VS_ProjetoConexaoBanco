@@ -67,7 +67,7 @@ namespace ConexaoBanco
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -83,14 +83,14 @@ namespace ConexaoBanco
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // veiculoToolStripMenuItem
             // 
             this.veiculoToolStripMenuItem.Name = "veiculoToolStripMenuItem";
-            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.veiculoToolStripMenuItem.Text = "Veículo";
             // 
             // movimentaçãoToolStripMenuItem
@@ -106,13 +106,13 @@ namespace ConexaoBanco
             // locaçãoToolStripMenuItem
             // 
             this.locaçãoToolStripMenuItem.Name = "locaçãoToolStripMenuItem";
-            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.locaçãoToolStripMenuItem.Text = "Locação";
             // 
             // devoluçãoToolStripMenuItem
             // 
             this.devoluçãoToolStripMenuItem.Name = "devoluçãoToolStripMenuItem";
-            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.devoluçãoToolStripMenuItem.Text = "Devolução";
             // 
             // FrmPrincipal
@@ -125,7 +125,8 @@ namespace ConexaoBanco
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuPrincipal;
             this.Name = "FrmPrincipal";
-            this.Text = "Aluguél de Veiculos- Painel de Administração";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "Painel de Administração de Locação";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();
